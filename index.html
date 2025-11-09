@@ -1,18 +1,462 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <title>200 Receitas Fit para Queimar Gordura | E-book de Receitas Fitness</title>
-    <meta name="description" content="Descubra 200 receitas fit deliciosas que transformam sua dieta em prazer. Queime gordura comendo pratos saborosos. Acesso imediato por apenas R$ 10. Garantia de 7 dias." />
-    <link rel="icon" type="image/png" href="/favicon.png" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>200 Receitas Fit para Queimar Gordura - E-book</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fira+Code:wght@300..700&family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Oxanium:wght@200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <script type="module" crossorigin src="/assets/script.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/style.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #424242;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #4CAF50 0%, #FFCC80 100%);
+            color: #FFFFFF;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-image {
+            max-width: 400px;
+            width: 100%;
+            height: auto;
+            margin: 30px auto;
+            display: block;
+        }
+        
+        .cta-button {
+            background: #FF9800;
+            color: #FFFFFF;
+            padding: 20px 40px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255, 152, 0, 0.4);
+        }
+        
+        .cta-subtext {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 400;
+            margin-top: 8px;
+        }
+        
+        .section {
+            padding: 60px 20px;
+        }
+        
+        .bg-light-green {
+            background: #E8F5E9;
+        }
+        
+        .bg-white {
+            background: #FFFFFF;
+        }
+        
+        .bg-dark {
+            background: #212121;
+            color: #FFFFFF;
+        }
+        
+        .section h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .pain-list, .benefit-list, .feature-list, .qualification-list {
+            max-width: 800px;
+            margin: 0 auto;
+            list-style: none;
+        }
+        
+        .pain-list li, .benefit-list li, .feature-list li, .qualification-list li {
+            padding: 15px 0;
+            font-size: 1.1rem;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+        
+        .pain-list li:last-child, .benefit-list li:last-child, .feature-list li:last-child, .qualification-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .closing-phrase {
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-top: 30px;
+            font-style: italic;
+        }
+        
+        .solution-image {
+            max-width: 350px;
+            width: 100%;
+            height: auto;
+            margin: 30px auto;
+            display: block;
+        }
+        
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 40px auto;
+        }
+        
+        .testimonial-card {
+            background: #FFFFFF;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .stars {
+            color: #FF9800;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+        
+        .testimonial-text {
+            font-size: 1rem;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: #4CAF50;
+        }
+        
+        .two-column-list {
+            max-width: 900px;
+            margin: 30px auto;
+        }
+        
+        .qualification-section {
+            margin-bottom: 50px;
+        }
+        
+        .qualification-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .price-box {
+            text-align: center;
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 12px;
+        }
+        
+        .old-price {
+            font-size: 1.3rem;
+            text-decoration: line-through;
+            color: #BDBDBD;
+            margin-bottom: 10px;
+        }
+        
+        .new-price {
+            font-size: 4rem;
+            font-weight: 800;
+            color: #FF9800;
+            margin: 20px 0;
+        }
+        
+        .payment-info {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            margin-bottom: 30px;
+        }
+        
+        .faq-question {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #4CAF50;
+        }
+        
+        .faq-answer {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .guarantee-section {
+            text-align: center;
+        }
+        
+        .guarantee-seal {
+            max-width: 200px;
+            width: 100%;
+            height: auto;
+            margin: 0 auto 30px;
+            display: block;
+        }
+        
+        .guarantee-text {
+            max-width: 700px;
+            margin: 20px auto;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .footer-cta {
+            text-align: center;
+        }
+        
+        .footer-cta h2 {
+            margin-bottom: 30px;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .cta-button {
+                font-size: 1.1rem;
+                padding: 16px 30px;
+            }
+            
+            .section h2 {
+                font-size: 1.6rem;
+            }
+            
+            .new-price {
+                font-size: 3rem;
+            }
+            
+            .testimonials {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="container">
+            <h1>FINALMENTE: O Guia Que Permite Queimar Gordura Comendo Pratos Deliciosos.</h1>
+            <p>Sua dieta chata termina hoje. Descubra 200 receitas fáceis que transformam o sacrifício em prazer e garantem a consistência que você precisa para ver o resultado no espelho.</p>
+            
+            <img src="[COLOQUE AQUI O LINK DA IMAGEM DO LIVRO ABERTO]" alt="200 Receitas Fit para Queimar Gordura - Ebook em destaque" class="hero-image">
+            
+            <a href="#oferta" class="cta-button">
+                SIM, QUERO AS 200 RECEITAS AGORA!
+                <span class="cta-subtext">(Acesso Imediato por Apenas R$ 10)</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE IDENTIFICAÇÃO DA DOR -->
+    <section class="section bg-light-green">
+        <div class="container">
+            <h2>Você se identifica com isso?</h2>
+            <ul class="pain-list">
+                <li>❌ Você começa a dieta na segunda motivado, mas na quarta já não aguenta mais comer frango grelhado e salada sem graça.</li>
+                <li>❌ A comida 'fit' parece cara, complicada e leva horas para preparar.</li>
+                <li>❌ Você até se esforça, mas a falta de variedade te faz chutar o balde no fim de semana.</li>
+                <li>❌ Você vive no 'ciclo da culpa': começa, para, se frustra e nunca vê o resultado que espera.</li>
+            </ul>
+            <p class="closing-phrase">Se você marcou 'sim', saiba que a culpa não é sua. O problema é o seu método.</p>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DA SOLUÇÃO -->
+    <section class="section bg-white">
+        <div class="container">
+            <h2>Imagine poder...</h2>
+            <ul class="benefit-list">
+                <li>✅ Comer uma Panqueca de Banana no café da manhã...</li>
+                <li>✅ Almoçar um Strogonoff Fit ou uma Lasanha de Berinjela...</li>
+                <li>✅ Preparar Coxinha Fit ou Pão de Queijo de Frigideira no lanche...</li>
+                <li>✅ E matar a vontade de doce com um Brownie de Batata Doce...</li>
+            </ul>
+            <p class="closing-phrase">...E ainda assim queimar gordura toda semana.</p>
+            
+            <img src="[COLOQUE AQUI O LINK DA CAPA DO EBOOK]" alt="Capa do E-book 200 Receitas Fit" class="solution-image">
+            
+            <h3 style="text-align: center; margin-top: 40px; font-size: 1.8rem;">O que você vai receber acesso imediato hoje:</h3>
+            <ul class="feature-list">
+                <li>⭐ <strong>Cafés da Manhã Poderosos:</strong> Panquecas, tapiocas, omeletes e muito mais para começar o dia com energia.</li>
+                <li>⭐ <strong>Almoços e Jantares Incríveis:</strong> Strogonoff, lasanhas, risotos e pratos que você ama, mas na versão fit.</li>
+                <li>⭐ <strong>Lanches Práticos:</strong> Coxinhas, pães de queijo, bolinhos e petiscos para matar a fome sem culpa.</li>
+                <li>⭐ <strong>Doces Irresistíveis:</strong> Brownies, pudins, mousses e sobremesas que parecem "proibidas".</li>
+                <li>⭐ <strong>Receitas Low Carb:</strong> Opções com menos carboidratos para acelerar a queima de gordura.</li>
+                <li>⭐ <strong>Receitas Veganas e Vegetarianas:</strong> Alternativas deliciosas sem proteína animal.</li>
+                <li>⭐ <strong>Molhos e Temperos Fit:</strong> Como dar sabor à comida sem estragar a dieta.</li>
+                <li>⭐ <strong>Receitas de 15 Minutos:</strong> Para quem tem pouco tempo mas quer comer bem.</li>
+                <li>⭐ <strong>Marmitas Práticas:</strong> Receitas perfeitas para preparar e levar para o trabalho.</li>
+                <li>⭐ <strong>Guia de Substituições:</strong> Como adaptar qualquer receita para deixá-la mais saudável.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- PROVA SOCIAL -->
+    <section class="section bg-light-green">
+        <div class="container">
+            <h2>Veja o que dizem as primeiras pessoas que testaram as receitas:</h2>
+            <div class="testimonials">
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Eu achava que comida fit era sem graça, mas essas receitas provaram que eu estava completamente errada! O brownie de batata doce virou minha sobremesa favorita e eu continuo emagrecendo."</p>
+                    <p class="testimonial-author">- Maria S.</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"A seção de doces é minha favorita. Eu consigo manter a dieta porque não sinto que estou abrindo mão de nada. Perdi 5kg em um mês sem sofrimento!"</p>
+                    <p class="testimonial-author">- João P.</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Finalmente um e-book com receitas que eu consigo fazer! Ingredientes simples, preparo rápido e tudo muito gostoso. Estou fazendo propaganda para todas as minhas amigas!"</p>
+                    <p class="testimonial-author">- Ana L.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PARA QUEM É -->
+    <section class="section bg-white">
+        <div class="container">
+            <div class="qualification-section">
+                <h2>Este Guia foi desenhado para você que:</h2>
+                <ul class="qualification-list">
+                    <li>✅ Quer emagrecer sem passar fome ou comer comida sem gosto.</li>
+                    <li>✅ Precisa de praticidade e não tem horas para passar na cozinha.</li>
+                    <li>✅ Já tentou várias dietas mas sempre desiste por falta de variedade.</li>
+                    <li>✅ Quer aprender a fazer versões saudáveis dos seus pratos favoritos.</li>
+                    <li>✅ Está cansado de viver no ciclo de culpa e quer uma solução definitiva.</li>
+                </ul>
+            </div>
+            
+            <div class="qualification-section">
+                <h3>❌ Este guia NÃO é para quem:</h3>
+                <ul class="qualification-list">
+                    <li>❌ Procura uma "solução mágica" sem fazer nenhum esforço na cozinha.</li>
+                    <li>❌ Não está disposto a dar uma chance para receitas novas e diferentes.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DA OFERTA -->
+    <section id="oferta" class="section bg-dark">
+        <div class="container">
+            <h2>Quanto vale parar de sofrer com dietas?</h2>
+            <div class="price-box">
+                <p class="old-price">De R$ 47,00 por apenas</p>
+                <p class="new-price">R$ 10,00</p>
+                <p class="payment-info">(Pagamento Único)</p>
+                <a href="#" class="cta-button">SIM, QUERO DESBLOQUEAR AS 200 RECEITAS POR R$ 10!</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section bg-white">
+        <div class="container">
+            <h2>Ainda tem dúvidas? Eu respondo:</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <p class="faq-question">❓ As receitas são difíceis de fazer?</p>
+                    <p class="faq-answer">Não! Todas as receitas foram pensadas para serem práticas e simples. A maioria leva menos de 30 minutos para preparar e usa ingredientes fáceis de encontrar em qualquer supermercado.</p>
+                </div>
+                <div class="faq-item">
+                    <p class="faq-question">❓ Vou receber o e-book como?</p>
+                    <p class="faq-answer">Logo após a confirmação do pagamento, você receberá um e-mail com o link para download do e-book em PDF. O acesso é imediato e você pode ler em qualquer dispositivo: celular, tablet ou computador.</p>
+                </div>
+                <div class="faq-item">
+                    <p class="faq-question">❓ As receitas são caras?</p>
+                    <p class="faq-answer">Muito pelo contrário! Uma das vantagens deste guia é que priorizamos ingredientes acessíveis e econômicos. Você vai economizar dinheiro comendo melhor do que comprar comida pronta ou delivery.</p>
+                </div>
+                <div class="faq-item">
+                    <p class="faq-question">❓ Funciona para quem é vegetariano ou vegano?</p>
+                    <p class="faq-answer">Sim! O e-book possui uma seção exclusiva com receitas veganas e vegetarianas, além de um guia de substituições que ensina a adaptar qualquer receita para seu estilo alimentar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GARANTIA -->
+    <section class="section bg-light-green guarantee-section">
+        <div class="container">
+            <img src="[COLOQUE AQUI O LINK DO SELO DE GARANTIA]" alt="Selo de Garantia de 7 Dias" class="guarantee-seal">
+            <h2>O Risco é 100% Meu</h2>
+            <p class="guarantee-text">Eu confio tanto neste material que vou te dar 7 dias de garantia incondicional. Se por qualquer motivo você não gostar do conteúdo, é só me enviar um e-mail e eu devolvo 100% do seu dinheiro. Sem perguntas, sem burocracia. O risco é todo meu, e a decisão é toda sua.</p>
+        </div>
+    </section>
+
+    <!-- RODAPÉ CTA FINAL -->
+    <section class="section bg-dark footer-cta">
+        <div class="container">
+            <h2>Sua transformação começa agora.</h2>
+            <a href="#oferta" class="cta-button">SIM, QUERO AS 200 RECEITAS AGORA!</a>
+        </div>
+    </section>
+
+</body>
 </html>
