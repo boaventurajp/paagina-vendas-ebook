@@ -122,6 +122,27 @@
             padding: 15px 0;
             font-size: 1.1rem;
             border-bottom: 1px solid rgba(0,0,0,0.1);
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+        
+        .pain-list li span:first-child, 
+        .benefit-list li span:first-child, 
+        .feature-list li span:first-child, 
+        .qualification-list li span:first-child {
+            flex-shrink: 0;
+            font-size: 1.3rem;
+            line-height: 1.4;
+        }
+        
+        .pain-list li span:last-child, 
+        .benefit-list li span:last-child, 
+        .feature-list li span:last-child, 
+        .qualification-list li span:last-child {
+            flex: 1;
+            line-height: 1.6;
+            text-align: left;
         }
         
         .pain-list li:last-child, .benefit-list li:last-child, .feature-list li:last-child, .qualification-list li:last-child {
@@ -302,7 +323,7 @@
             <h1>FINALMENTE: O Guia Que Permite Queimar Gordura Comendo Pratos Deliciosos.</h1>
             <p>Sua dieta chata termina hoje. Descubra 200 receitas fáceis que transformam o sacrifício em prazer e garantem a consistência que você precisa para ver o resultado no espelho.</p>
             
-            <img src="[COLOQUE AQUI O LINK DA IMAGEM DO LIVRO ABERTO]" alt="200 Receitas Fit para Queimar Gordura - Ebook em destaque" class="hero-image">
+            <img src="attached_assets/Captura de tela 2025-11-08 211327_1762647226717_1762719133588.png" alt="200 Receitas Fit para Queimar Gordura - Ebook em destaque" class="hero-image">
             
             <a href="#oferta" class="cta-button">
                 SIM, QUERO AS 200 RECEITAS AGORA!
@@ -316,10 +337,10 @@
         <div class="container">
             <h2>Você se identifica com isso?</h2>
             <ul class="pain-list">
-                <li>❌ Você começa a dieta na segunda motivado, mas na quarta já não aguenta mais comer frango grelhado e salada sem graça.</li>
-                <li>❌ A comida 'fit' parece cara, complicada e leva horas para preparar.</li>
-                <li>❌ Você até se esforça, mas a falta de variedade te faz chutar o balde no fim de semana.</li>
-                <li>❌ Você vive no 'ciclo da culpa': começa, para, se frustra e nunca vê o resultado que espera.</li>
+                <li><span>❌</span><span>Você começa a dieta na segunda motivado, mas na quarta já não aguenta mais comer frango grelhado e salada sem graça.</span></li>
+                <li><span>❌</span><span>A comida 'fit' parece cara, complicada e leva horas para preparar.</span></li>
+                <li><span>❌</span><span>Você até se esforça, mas a falta de variedade te faz chutar o balde no fim de semana.</span></li>
+                <li><span>❌</span><span>Você vive no 'ciclo da culpa': começa, para, se frustra e nunca vê o resultado que espera.</span></li>
             </ul>
             <p class="closing-phrase">Se você marcou 'sim', saiba que a culpa não é sua. O problema é o seu método.</p>
         </div>
@@ -330,27 +351,27 @@
         <div class="container">
             <h2>Imagine poder...</h2>
             <ul class="benefit-list">
-                <li>✅ Comer uma Panqueca de Banana no café da manhã...</li>
-                <li>✅ Almoçar um Strogonoff Fit ou uma Lasanha de Berinjela...</li>
-                <li>✅ Preparar Coxinha Fit ou Pão de Queijo de Frigideira no lanche...</li>
-                <li>✅ E matar a vontade de doce com um Brownie de Batata Doce...</li>
+                <li><span>✅</span><span>Comer uma Panqueca de Banana no café da manhã...</span></li>
+                <li><span>✅</span><span>Almoçar um Strogonoff Fit ou uma Lasanha de Berinjela...</span></li>
+                <li><span>✅</span><span>Preparar Coxinha Fit ou Pão de Queijo de Frigideira no lanche...</span></li>
+                <li><span>✅</span><span>E matar a vontade de doce com um Brownie de Batata Doce...</span></li>
             </ul>
             <p class="closing-phrase">...E ainda assim queimar gordura toda semana.</p>
             
-            <img src="[COLOQUE AQUI O LINK DA CAPA DO EBOOK]" alt="Capa do E-book 200 Receitas Fit" class="solution-image">
+            <img src="attached_assets/Fitness_recipe_e-book_cover_NEW_1762718228282.png" alt="Capa do E-book 200 Receitas Fit" class="solution-image">
             
             <h3 style="text-align: center; margin-top: 40px; font-size: 1.8rem;">O que você vai receber acesso imediato hoje:</h3>
             <ul class="feature-list">
-                <li>⭐ <strong>Cafés da Manhã Poderosos:</strong> Panquecas, tapiocas, omeletes e muito mais para começar o dia com energia.</li>
-                <li>⭐ <strong>Almoços e Jantares Incríveis:</strong> Strogonoff, lasanhas, risotos e pratos que você ama, mas na versão fit.</li>
-                <li>⭐ <strong>Lanches Práticos:</strong> Coxinhas, pães de queijo, bolinhos e petiscos para matar a fome sem culpa.</li>
-                <li>⭐ <strong>Doces Irresistíveis:</strong> Brownies, pudins, mousses e sobremesas que parecem "proibidas".</li>
-                <li>⭐ <strong>Receitas Low Carb:</strong> Opções com menos carboidratos para acelerar a queima de gordura.</li>
-                <li>⭐ <strong>Receitas Veganas e Vegetarianas:</strong> Alternativas deliciosas sem proteína animal.</li>
-                <li>⭐ <strong>Molhos e Temperos Fit:</strong> Como dar sabor à comida sem estragar a dieta.</li>
-                <li>⭐ <strong>Receitas de 15 Minutos:</strong> Para quem tem pouco tempo mas quer comer bem.</li>
-                <li>⭐ <strong>Marmitas Práticas:</strong> Receitas perfeitas para preparar e levar para o trabalho.</li>
-                <li>⭐ <strong>Guia de Substituições:</strong> Como adaptar qualquer receita para deixá-la mais saudável.</li>
+                <li><span>⭐</span><span><strong>Cafés da Manhã Poderosos:</strong> Panquecas, tapiocas, omeletes e muito mais para começar o dia com energia.</span></li>
+                <li><span>⭐</span><span><strong>Almoços e Jantares Incríveis:</strong> Strogonoff, lasanhas, risotos e pratos que você ama, mas na versão fit.</span></li>
+                <li><span>⭐</span><span><strong>Lanches Práticos:</strong> Coxinhas, pães de queijo, bolinhos e petiscos para matar a fome sem culpa.</span></li>
+                <li><span>⭐</span><span><strong>Doces Irresistíveis:</strong> Brownies, pudins, mousses e sobremesas que parecem "proibidas".</span></li>
+                <li><span>⭐</span><span><strong>Receitas Low Carb:</strong> Opções com menos carboidratos para acelerar a queima de gordura.</span></li>
+                <li><span>⭐</span><span><strong>Receitas Veganas e Vegetarianas:</strong> Alternativas deliciosas sem proteína animal.</span></li>
+                <li><span>⭐</span><span><strong>Molhos e Temperos Fit:</strong> Como dar sabor à comida sem estragar a dieta.</span></li>
+                <li><span>⭐</span><span><strong>Receitas de 15 Minutos:</strong> Para quem tem pouco tempo mas quer comer bem.</span></li>
+                <li><span>⭐</span><span><strong>Marmitas Práticas:</strong> Receitas perfeitas para preparar e levar para o trabalho.</span></li>
+                <li><span>⭐</span><span><strong>Guia de Substituições:</strong> Como adaptar qualquer receita para deixá-la mais saudável.</span></li>
             </ul>
         </div>
     </section>
@@ -385,19 +406,19 @@
             <div class="qualification-section">
                 <h2>Este Guia foi desenhado para você que:</h2>
                 <ul class="qualification-list">
-                    <li>✅ Quer emagrecer sem passar fome ou comer comida sem gosto.</li>
-                    <li>✅ Precisa de praticidade e não tem horas para passar na cozinha.</li>
-                    <li>✅ Já tentou várias dietas mas sempre desiste por falta de variedade.</li>
-                    <li>✅ Quer aprender a fazer versões saudáveis dos seus pratos favoritos.</li>
-                    <li>✅ Está cansado de viver no ciclo de culpa e quer uma solução definitiva.</li>
+                    <li><span>✅</span><span>Quer emagrecer sem passar fome ou comer comida sem gosto.</span></li>
+                    <li><span>✅</span><span>Precisa de praticidade e não tem horas para passar na cozinha.</span></li>
+                    <li><span>✅</span><span>Já tentou várias dietas mas sempre desiste por falta de variedade.</span></li>
+                    <li><span>✅</span><span>Quer aprender a fazer versões saudáveis dos seus pratos favoritos.</span></li>
+                    <li><span>✅</span><span>Está cansado de viver no ciclo de culpa e quer uma solução definitiva.</span></li>
                 </ul>
             </div>
             
             <div class="qualification-section">
                 <h3>❌ Este guia NÃO é para quem:</h3>
                 <ul class="qualification-list">
-                    <li>❌ Procura uma "solução mágica" sem fazer nenhum esforço na cozinha.</li>
-                    <li>❌ Não está disposto a dar uma chance para receitas novas e diferentes.</li>
+                    <li><span>❌</span><span>Procura uma "solução mágica" sem fazer nenhum esforço na cozinha.</span></li>
+                    <li><span>❌</span><span>Não está disposto a dar uma chance para receitas novas e diferentes.</span></li>
                 </ul>
             </div>
         </div>
@@ -444,7 +465,7 @@
     <!-- GARANTIA -->
     <section class="section bg-light-green guarantee-section">
         <div class="container">
-            <img src="[COLOQUE AQUI O LINK DO SELO DE GARANTIA]" alt="Selo de Garantia de 7 Dias" class="guarantee-seal">
+            <img src="attached_assets/Money-back_guarantee_seal_badge_5b71238e_1762718385996.png" alt="Selo de Garantia de 7 Dias" class="guarantee-seal">
             <h2>O Risco é 100% Meu</h2>
             <p class="guarantee-text">Eu confio tanto neste material que vou te dar 7 dias de garantia incondicional. Se por qualquer motivo você não gostar do conteúdo, é só me enviar um e-mail e eu devolvo 100% do seu dinheiro. Sem perguntas, sem burocracia. O risco é todo meu, e a decisão é toda sua.</p>
         </div>
